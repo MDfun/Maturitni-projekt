@@ -32,7 +32,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'main_page') {
 if (isset($_GET['action']) && $_GET['action'] == 'main_page_admin') {
     main_page_admin();
 }
-if (isset($_GET['action']) && $_GET['action'] == 'main_page_admin_delete') {
+if (isset($_GET['delete'])) {
     main_page_admin_delete();
 }
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['card_name'])){
