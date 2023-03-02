@@ -287,7 +287,7 @@ function main_page_admin(){
         $row_delete[$i] = $row["user_key"];
         echo "<td><a href='#'>EDIT</a></td>
               <td><a href='#'>BAN</a></td>
-              <td><a href='#' onclick=\"window.location.href='local_brain.php?action=main_page_admin_delete(".$row["user_key"].")'\">DELETE</a></td>";
+              <td><a href='?delete=" . $row['user_key'] . "'>DELETE</a></td>";
         echo "</tr>";
         $i++;
     }
@@ -446,7 +446,7 @@ function info_graph($money){
 function main_page_admin_delete(){
     global $conn;
 
-    $sql = "DELETE FROM `user` WHERE user_key = '".$_SESSION["user_key_delete"]."';";
+    $sql = "DELETE FROM `user` WHERE user_key = '". $_GET['delete']."';";
     var_dump($sql);
 }
 //if (isset($_SESSION["u_id"])){
