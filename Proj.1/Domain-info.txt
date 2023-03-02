@@ -1,0 +1,2 @@
+Domain: whitefox-banking.euweb.cz
+Password: Banking4free10
